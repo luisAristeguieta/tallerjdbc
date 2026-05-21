@@ -10,5 +10,11 @@ CREATE TABLE vehiculos(
 	disponible BOOLEAN NOT NULL 
 	);
 
+insert into vehiculos (placa,marca,modelo,anio,precio,color,disponible)
+values ('PDF1025','Chevrolet','Sail',2025,10000,'Blanco',TRUE);
+
+insert into nombreTabla (nombreColuma1,nombreColumaX...)
+values (datoColumna1,datoColumna1,datoColumna1,...),
 
 
+select * from vehiculos;
