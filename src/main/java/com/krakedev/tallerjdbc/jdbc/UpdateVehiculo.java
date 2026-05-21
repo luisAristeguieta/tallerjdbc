@@ -16,7 +16,7 @@ public class UpdateVehiculo {
 		PreparedStatement ps = null;
 
 		String sql = """
-				update vehiculos set marca =?,modelo=?,anio=?,precio=?,color=?,disponible=? where placa = ?
+				update vehiculos set marca =?,modelo=?,anio=?,precio=?,color=?,disponible=?, kilometraje =? where placa = ?
 				""";
 		try {
 			con = Conexion.getConnection();
@@ -28,8 +28,9 @@ public class UpdateVehiculo {
 			ps.setDouble(4, 16000);
 			ps.setString(5, "Azul");
 			ps.setBoolean(6, true);
-			ps.setString(7, "GRX7233");
-
+			ps.setInt(7, 95000);
+			ps.setString(8, "PDF7233");
+			
 			int filas = ps.executeUpdate(); // Ejecuta la sentencia SQL y se guarda el valor representando el valor de
 											// filas afectadas
 

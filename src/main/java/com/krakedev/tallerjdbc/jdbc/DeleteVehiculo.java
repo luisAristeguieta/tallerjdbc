@@ -22,12 +22,12 @@ public class DeleteVehiculo {
 			con = Conexion.getConnection();
 			ps = con.prepareStatement(sql);
 
-			ps.setString(1, "GRX7233");
+			ps.setString(1, "PBC1234");
 
 			int filas = ps.executeUpdate(); // Ejecuta la sentencia SQL y se guarda el valor representando el valor de
 											// filas afectadas
 
-			log.info("Sentencia ejecutada correctamente, # de vehiculos eliminados: " + filas);
+			log.info("Sentencia ejecutada correctamente, # de vehiculo(s) " + filas);
 
 		} catch (SQLException e) {
 			log.error("Error SQL" + e.getMessage());
